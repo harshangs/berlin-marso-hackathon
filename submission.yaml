@@ -1,0 +1,12 @@
+team: "Blades"
+policy: warehouse_sort.il_policy:load_dp
+obs_mode: state
+
+levels:
+  easy:
+    checkpoint: il/baselines/diffusion_policy/runs/warehouse_state_dp_easy_ph32_resumed/checkpoints/best_eval_sort_accuracy.pt
+    policy: warehouse_sort.il_policy:load_dp_easy
+
+  medium:
+    checkpoint: il/baselines/diffusion_policy/runs/warehouse_state_dp_medium_ph32_steps400_v2/checkpoints/best_eval_sort_accuracy.pt
+    policy: warehouse_sort.il_policy:load_dp_medium
